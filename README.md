@@ -24,7 +24,7 @@ I designed the network topology using Packet Tracer, including the placement of 
 
 I choose 192.168.0.0/24 address for the project. However, I segmented the network into two: LAN1 and LAN2. LAN1 is meant to have 12 hosts while LAN2 is to have 5 hosts. The most appropriate subnet for LAN1 is 255.255.255.240 which gives 16 hosts. For LAN2, 255.255.255.248 is the appropriate subnet as it gives 6 hosts.
 
-To optimize the IP address allocation and minimize wastage of IP addresses, I implemented VLSM. The first segment (LAN1) which requires 12 host is on 192.168.0.0/28 network while second segment is on 192.168.0.16/29 network.
+To optimize the IP address allocation and minimize wastage of IP addresses, I implemented VLSM. The first segment (LAN1) which requires 12 host is on 192.168.0.0/28 network (which gives 14 usable hosts) while second segment is on 192.168.0.16/29 network (which gives 6usable hosts).
 
 3. Switch Basic Configuration: 
 
