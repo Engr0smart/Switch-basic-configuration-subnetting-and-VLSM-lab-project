@@ -1,0 +1,88 @@
+SWITCH CONFIGURATION
+enable
+config terminal
+hostname LAN1
+enable secret class
+no ip domain-lookup
+
+banner motd $
+###########################################################
+ATTENTION!
+UNAUTHORIZED ACCESS ON THIS DEVICE IS HIGHLY PROHIBITED! CONTACT ADMIN FOR ACCESS.
+###########################################################
+$
+
+line console 0
+password cisco
+login
+exit
+
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+
+int vlan 1
+ip address 192.168.0.2 255.255.255.240
+no shutdown
+exit
+
+ip default-gateway 192.168.0.1
+exit
+
+copy running-config startup-config
+
+
+ROUTER CONFIGURATION
+enable
+config terminal
+hostname LAN1
+enable secret class
+no ip domain-lookup
+
+banner motd $
+###########################################################
+ATTENTION!
+UNAUTHORIZED ACCESS ON THIS DEVICE IS HIGHLY PROHIBITED! CONTACT ADMIN FOR ACCESS.
+###########################################################
+$
+
+line console 0
+password cisco
+login
+exit
+
+line vty 0 4
+password cisco
+login
+exit
+service password-encryption
+
+int g0/0
+ip address 192.168.0.1 255.255.255.240
+no shutdown
+exit
+
+int g0/1
+ip address 192.168.0.17 255.255.255.248
+no shutdown
+end
+
+copy running-config startup-config
+
+
+HOME ROUTER
+- Open Laptop
+- Go to Desktop tab and select Web Browser
+- Type 192.168.0.1 (default router address) NB: ensure Laptop IP configuration is static
+- Use the default login details below:
+	User Name: admin
+	Password: admin
+- You can change it under the "Administration" tab after logging in
+- Go to setup and configure your Network and Internet IP addresses
+- Click save
+
+PC/Laptop
+- Under Desktop, select IP Configuration
+- Configure the device

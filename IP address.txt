@@ -1,0 +1,25 @@
+IP ADDRESSES
+
+	Network Address		Usable Host Range		Broadcast Address	Subnet
+LAN1	192.168.0.0/28		192.168.0.1 - 192.168.0.14	192.168.0.15		255.255.255.240
+LAN2	192.168.0.16/29		192.168.0.17 - 192.168.0.22	192.168.0.23		255.255.255.248
+
+LAN 1 SWITCH
+Vlan 1 - 192.168.0.2
+Default Gateway - 192.168.0.1
+
+LAN 2 SWITCH
+Vlan 1 - 192.168.0.18
+Default gateway - 192.168.0.17
+
+ROUTER
+Interface Gigabit 0/0 - 192.168.0.1/28
+Interface Gigabit 0/1 - 192.168.0.17/29
+
+HOME ROUTER
+Internet - 192.168.0.21/29
+LAN Network - 10.10.0.1/24
+
+PC1 - 192.168.0.14/28
+PC2 - 192.168.0.13/28
+PC3 - 192.168.0.22/29
